@@ -1,26 +1,25 @@
-# coding: utf-8
-#!/usr/bin/env python
-
 from setuptools import setup, find_packages
+import sys, os
 
-readme = open('README').read()
 
-setup(
-    name='ci',
-    version='${version}',
-    description='',
-    long_description=readme,
-    author='jackyu',
-    author_email='jackyu@sohu-inc.com',
-    url='http://m.sohu.com',
-    packages=find_packages('ci'),
-    package_dir={'': 'ci'},
-    include_package_data = True,
-    install_requires=[
-        'essay>=2.9.1.1',
-        'bottle',
-        'pyyaml'
-        ],
-    entry_points={
-    },
-)
+setup(name='ci',
+      version='${version}',
+      description="",
+      long_description="""\
+""",
+      classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+      keywords='',
+      author='jackyu',
+      author_email='jackyu@sohu-inc.com',
+      url='m.sohu.com',
+      license='',
+      packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
+      include_package_data=True,
+      zip_safe=False,
+      install_requires=[
+          # -*- Extra requirements: -*-
+      ],
+      entry_points="""
+      # -*- Entry points: -*-
+      """,
+      )
