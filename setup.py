@@ -17,7 +17,9 @@ setup(name='ci',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          # -*- Extra requirements: -*-
+        'pyyaml',
+        'bottle',
+        'fabric',
       ],
       entry_points="""
       # -*- Entry points: -*-
