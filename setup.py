@@ -16,8 +16,6 @@ setup(
     packages=find_packages('ci'),
     package_dir={'': 'ci'},
     include_package_data = True,
-    package_data = {
-    },
     install_requires=[
         'essay>=2.9.1.1',
         'bottle',
