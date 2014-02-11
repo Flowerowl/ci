@@ -19,12 +19,9 @@ setup(
     },
     install_requires=[
         'essay>=2.9.1.1',
-        'django>=1.3',
-        'gunicorn',
+        'bottle',
+        'yaml'
         ],
     entry_points={
-        'console_scripts': [
-            ' = .main:main',
-        ]
     },
 )
