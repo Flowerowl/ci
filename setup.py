@@ -6,12 +6,12 @@ from setuptools import setup, find_packages
 readme = open('README').read()
 
 setup(
-    name='',
+    name='ci',
     version='${version}',
     description='',
     long_description=readme,
-    author='wap-tech',
-    author_email='waptech@sohu-inc.com',
+    author='jackyu',
+    author_email='jackyu@sohu-inc.com',
     url='http://m.sohu.com',
     packages=find_packages(exclude=['*.pyc']),
     include_package_data = True,
