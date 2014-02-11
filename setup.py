@@ -3,7 +3,7 @@
 
 from setuptools import setup, find_packages
 
-readme = open('README').read()
+readme = open('README.md').read()
 
 setup(
     name='ci',
