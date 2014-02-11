@@ -20,7 +20,7 @@ setup(
     install_requires=[
         'essay>=2.9.1.1',
         'bottle',
-        'yaml'
+        'pyyaml'
         ],
     entry_points={
     },
