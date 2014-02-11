@@ -13,7 +13,8 @@ setup(
     author='jackyu',
     author_email='jackyu@sohu-inc.com',
     url='http://m.sohu.com',
-    packages=find_packages(exclude=['*.pyc']),
+    packages=find_packages('ci'),
+    package_dir={'': 'ci'}
     include_package_data = True,
     package_data = {
     },
