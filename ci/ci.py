@@ -9,6 +9,8 @@ import yaml
 from fabric.api import local, lcd
 from bottle import request, run, post
 
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler("ci.log")
