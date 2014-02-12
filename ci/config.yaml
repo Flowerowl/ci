@@ -1,2 +1,2 @@
-path : /
-command : uname -s
+path : /home/solar/ci
+command : fab -R dev deploy.quickdeploy:c,stage,master
