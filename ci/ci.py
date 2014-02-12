@@ -6,11 +6,9 @@ import logging
 import json
 
 import yaml
-from fabric.api import local, cd, run, env
+from fabric.api import local, lcd
 from bottle import request, run, post
 
-
-env.hosts = ['10.16.2.202']
 
 logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler("ci.log")
@@ -29,8 +27,8 @@ def deploy(git_data):
     config = yaml.load(open('config.yaml'))
     path = config['path']
     command = config['command']
-    with cd(path):
-        run(command)
+    with lcd(path):
+        local(command)
     logger.info(git_data)
 
-run(host='10.16.2.34', port=7180)
+run(host='10.16.2.202', port=7180)
