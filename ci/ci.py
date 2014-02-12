@@ -7,7 +7,7 @@ import json
 
 import yaml
 from fabric.api import local, lcd, run
-from bottle import run, post
+from bottle import request, run, post
 
 
 logger = logging.getLogger(__name__)
@@ -19,10 +19,9 @@ logger.addHandler(file_handler)
 
 @post('/')
 def index():
-    with open('data.json') as f:
-        git_data = json.loads(f.read())
-        if git_data['ref'] == 'refs/heads/master':
-            deploy(git_data)
+    git_data = json.loads(request.json)
+    if git_data['ref'] == 'refs/heads/master':
+        deploy(git_data)
 
 def deploy(git_data):
     config = yaml.load(open('config.yaml'))
@@ -32,4 +31,4 @@ def deploy(git_data):
         local(command)
     logger.info(git_data)
 
-run(host='localhost', port=7180)
+run(host='10.16.2.34', port=7180)
