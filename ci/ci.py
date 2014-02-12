@@ -2,6 +2,8 @@
 from __future__ import unicode_literals
 
 import sys
+import locale
+import codecs
 import logging
 import json
 
@@ -9,8 +11,7 @@ import yaml
 from fabric.api import local, lcd
 from bottle import request, run, post
 
-reload(sys)
-sys.setdefaultencoding('utf-8')
+sys.stdout = codecs.getwriter(locale.getpreferredencoding())(sys.stdout)
 
 logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler("ci.log")
