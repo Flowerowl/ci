@@ -27,7 +27,7 @@ env.roledefs = {
     'dev': ['solar@10.16.2.34'],
 }
 
-env.VIRTUALENV_PREFIX = '/home/solar/mcms'
+env.VIRTUALENV_PREFIX = '/home/solar/envs'
 env.SUPERVISOR_CONF_TEMPLATE = os.path.join(PROJECT_ROOT, 'conf', 'supervisord.conf')
 
 #根据工程确定项目编号
