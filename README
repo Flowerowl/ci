@@ -1,2 +1,11 @@
 # gitlab webhook测试环境自动发版
-testtestTest
+
+## 使用方法：
+
+配置：在config.yaml里填入需要持续部署项目的目录path以及fab命令
+
+项目启动：python ci.py
+
+在项目settings下得web hooks中填入本项目启动之后的IP
+
+OK!
