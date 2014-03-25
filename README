@@ -4,7 +4,7 @@
 
 配置：在config.yaml里填入需要持续部署项目的目录path以及fab命令
 
-项目启动：中控虚拟环境下supervisor启动，虚拟环境地址/home/solar/envs/c/
+项目启动：虚拟环境下supervisor启动，虚拟环境地址/home/flowerowl/envs/c/
 
 在项目settings下得web hooks中填入本项目启动之后的IP
 
