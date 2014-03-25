@@ -34,4 +34,4 @@ def deploy(git_data):
         local(command)
     logger.info(git_data)
 
-run(host='10.16.2.202', port=7180)
+run(host='localhost', port=7180)

@@ -11,23 +11,23 @@ from essay.tasks import deploy
 #from essay.tasks import nginx
 #from essay.tasks import supervisor
 
-env.GIT_SERVER = 'git.go.sohuno.com'  # ssh地址只需要填：github.com
+env.GIT_SERVER = 'github.com'  # ssh地址只需要填：github.com
 env.PROJECT = 'ci'
-env.BUILD_PATH = '/home/solar/build'
-env.PROJECT_OWNER = 'jackyu'
+env.BUILD_PATH = '/home/flowerowl/build'
+env.PROJECT_OWNER = 'flowerowl'
 env.DEFAULT_BRANCH = 'master'
-env.PYPI_INDEX = 'http://pypi.go.sohuno.com/simple/'
+env.PYPI_INDEX = 'http://pypi.xxx.com/simple/'
 
 
 ######
 # deploy settings:
 env.PROCESS_COUNT = 2  #部署时启动的进程数目
 env.roledefs = {
-    'build': ['solar@10.16.2.202'],  # 打包服务器配置
-    'dev': ['solar@10.16.2.34'],
+    'build': ['username@IP'],  # 打包服务器配置
+    'dev': ['username@IP'],
 }
 
-env.VIRTUALENV_PREFIX = '/home/solar/envs'
+env.VIRTUALENV_PREFIX = '/home/flowerowl/envs'
 env.SUPERVISOR_CONF_TEMPLATE = os.path.join(PROJECT_ROOT, 'conf', 'supervisord.conf')
 
 #根据工程确定项目编号
